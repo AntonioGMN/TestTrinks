@@ -27,7 +27,7 @@ npm run seed
 npm run dev
 ```
 
-G. Run the tests
+6. Run the tests
 
 ```bash
 npm run test
