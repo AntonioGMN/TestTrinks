@@ -1,9 +1,11 @@
 import supertest from 'supertest';
 import app from '../src/app.js';
 
-describe('login test', () => {
-  it('aadsas', async () => {
-    const resute = await supertest(app).get('/');
-    expect(resute.status).toEqual(200);
+describe('Process tests', () => {
+  it('return sum of all actice process', async () => {
+    const result = await supertest(app).get('/process/active');
+
+    expect(result.text).toEqual('R$ 1.087.000,00');
+    expect(result.status).toEqual(200);
   });
 });
